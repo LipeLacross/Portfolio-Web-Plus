@@ -1,70 +1,122 @@
 @import 'variables'
 @import 'mixins'
 
-// Seção de projetos (mesmo conteúdo do Home.sass)
-.apresentacao__projetos
+// Seção de Introdução
+.portfolio__sobre
+  padding: 5% 15%
+  display: flex
+  flex-direction: column
+  align-items: center
+  @include slideDown(1s, ease-out) // Animação para a seção de introdução
+
+.portfolio__titulo
+  font-size: 2.8rem // Aumenta o tamanho da fonte para maior impacto
+  font-family: $fonte-primaria
+  color: #FFFFFF // Cor do título em branco
+  margin-bottom: 1rem // Ajusta o espaçamento inferior
+  @include fadeIn(1s, ease-in) // Animação de fade-in para o título
+
+.portfolio__texto
+  font-size: 1.6rem // Aumenta o tamanho da fonte para melhor legibilidade
+  font-family: $fonte-secundaria
+  color: $cor-secundaria
+  line-height: 1.8 // Aumenta o espaçamento entre linhas para melhor leitura
+  text-align: center
+  max-width: 800px
+  margin-bottom: 4rem
+  @include slideUp(1s, ease-out) // Animação de slide-up para o texto
+
+// Seção de Projetos
+.portfolio__projetos
+  padding: 5% 15%
+  margin-bottom: 0 // Remove o espaçamento entre "Meus Projetos" e "Projetos em Destaque"
+  @include fadeIn(1s, ease-in) // Animação de fade-in para a seção de projetos
+
+.portfolio__destaque-titulo
+  font-size: 3.2rem // Ajusta o tamanho da fonte para melhor destaque
+  font-family: $fonte-primaria
+  color: #FFFFFF // Cor do título em branco
+  text-align: center
+  @include swing(1s, ease-in-out) // Animação de swing para o título de destaque
+
+.portfolio__lista-projetos
   display: grid
-  grid-template-columns: repeat(2, minmax(300px, 1fr))
-  gap: 2rem
-  padding: 2rem
+  grid-template-columns: repeat(3, 1fr) // Exibe 3 colunas
+  gap: 1rem // Reduz o espaçamento entre os projetos
   max-width: 1200px
-  width: 100%
   margin: 0 auto
-  justify-items: center
 
 .projeto
   color: $cor-primaria
   background-color: $cor-secundaria
-  padding: 1.5rem
-  border-radius: 12px
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+  padding: 1.5rem // Ajusta o padding para blocos menores
+  border-radius: 8px // Reduz o border-radius para compatibilidade com blocos menores
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) // Ajusta a sombra para blocos menores
   display: flex
   flex-direction: column
   align-items: center
+  justify-content: space-between // Garante que o conteúdo se distribua de forma flexível
   transition: transform 0.3s ease, box-shadow 0.3s ease
   text-align: center
   font-family: $fonte-secundaria
-  height: 100%
+  margin-top: -3rem
+  width: 100%
   box-sizing: border-box
-  width: 25rem
-  margin: 5rem 0 auto
+  min-height: auto // Remove a altura mínima fixa para permitir ajustes automáticos
+  margin-bottom: 4rem
 
 .projeto:hover
-  transform: translateY(-8px)
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2)
+  transform: scale(1.05) // Adiciona uma leve escala ao passar o mouse
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
 
 .projeto__imagem
   width: 100%
-  max-height: 200px
-  border-radius: 8px
-  margin-bottom: 1rem
+  max-height: 150px // Ajusta a altura máxima da imagem
+  border-radius: 6px // Reduz o border-radius para a imagem
+  margin-bottom: 1rem // Ajusta o espaçamento inferior
+  object-fit: cover // Garante que a imagem não distorça
+  @include zoomIn(1s, ease-out) // Animação de zoom-in para a imagem
 
 .projeto__titulo
   color: $cor-primaria
-  font-size: 1.6rem
-  margin-bottom: 1rem
+  font-size: 1.4rem // Ajusta o tamanho da fonte para maior destaque
+  margin-bottom: 0.5rem // Reduz o espaçamento inferior
   font-weight: 600
-  line-height: 1.3
+  line-height: 1.4 // Aumenta o espaçamento entre linhas para melhor leitura
+  @include swing(1s, ease-in-out) // Animação de swing para o título
 
 .projeto__descricao
   color: $cor-primaria
-  font-size: 1.1rem
-  margin-bottom: 1.5rem
-  line-height: 1.6
+  font-weight: bolder
+  font-size: 1rem // Ajusta o tamanho da fonte para melhor legibilidade
+  margin-bottom: 1rem // Ajusta o espaçamento inferior
+  line-height: 1.8 // Aumenta o espaçamento entre linhas para melhor leitura
+  @include slideIn(1s, ease-in) // Animação de slide-in para a descrição
 
 .projeto__funcionalidades
   color: $cor-primaria
-  font-size: 1.1rem
-  margin-bottom: 1.5rem
+  font-size: 1rem // Ajusta o tamanho da fonte para melhor legibilidade
+  margin-bottom: 1rem // Ajusta o espaçamento inferior
   text-align: left
-  line-height: 1.6
+  line-height: 1.8 // Aumenta o espaçamento entre linhas para melhor leitura
+  @include slideIn(1s, ease-out) // Animação de slide-in para funcionalidades
 
 .projeto__funcionalidades ul
   padding-left: 1.5rem
   list-style-type: disc
+  @include fadeIn(1s, ease-in) // Animação de fade-in para a lista de funcionalidades
 
 .projeto__funcionalidades ul li
-  margin-bottom: 0.5rem
+  margin-bottom: 0.5rem // Ajusta o espaçamento inferior
+  @include slideUp(1s, ease-out) // Animação de slide-up para cada item da lista
+
+.projeto__links
+  display: flex
+  gap: 2rem // Ajusta o espaçamento entre os links
+  margin-top: 1rem // Ajusta o espaço acima dos links
+  padding: 0 // Remove o padding
+  margin: 0 // Remove a margem
+  @include fadeIn(1s, ease-in) // Animação de fade-in para os links
 
 .projeto__link
   color: $cor-terciaria
@@ -72,14 +124,69 @@
   display: flex
   align-items: center
   transition: color 0.3s ease
+  margin: 0 // Remove a margem dos links
+  @include slideIn(1s, ease-out) // Animação de slide-in para os links
 
 .projeto__link a
   text-decoration: none
   color: $cor-primaria
 
 .projeto__link i
-  margin-top: 1rem
   margin-right: 0.5rem
 
 .projeto__link:hover
   color: $cor-hover
+
+// Responsividade
+@media (max-width: 1200px)
+  .portfolio__destaque-titulo
+    font-size: 2.5rem // Ajusta o tamanho da fonte para títulos em telas menores
+
+  .portfolio__lista-projetos
+    grid-template-columns: repeat(2, 1fr) // Ajusta para 2 colunas em telas menores
+
+@media (max-width: 800px)
+  .portfolio__destaque-titulo
+    font-size: 2rem // Ajusta o tamanho da fonte para títulos em telas ainda menores
+
+  .portfolio__lista-projetos
+    grid-template-columns: 1fr // Ajusta para 1 coluna em telas ainda menores
+
+@media (max-width: 600px)
+  .portfolio__destaque-titulo
+    font-size: 1.8rem // Ajusta o tamanho da fonte para títulos em telas muito pequenas
+
+  .portfolio__titulo
+    font-size: 2rem // Ajusta o tamanho da fonte para títulos em telas menores
+
+  .portfolio__texto
+    font-size: 1.4rem // Ajusta o tamanho da fonte para textos em telas menores
+
+  .projeto__titulo
+    font-size: 1.2rem // Ajusta o tamanho da fonte para títulos de projeto em telas menores
+
+  .projeto__descricao
+    font-size: 0.9rem // Ajusta o tamanho da fonte para descrições de projeto em telas menores
+
+  .projeto__funcionalidades
+    font-size: 0.9rem // Ajusta o tamanho da fonte para funcionalidades em telas menores
+
+@media (max-width: 450px)
+  .portfolio__destaque-titulo
+    font-size: 1.5rem // Ajusta o tamanho da fonte para títulos em telas muito pequenas
+    margin-bottom: 1rem
+
+  .portfolio__titulo
+    font-size: 1.6rem // Ajusta o tamanho da fonte para títulos em telas muito pequenas
+
+  .portfolio__texto
+    font-size: 1.2rem // Ajusta o tamanho da fonte para textos em telas muito pequenas
+
+  .projeto__titulo
+    font-size: 1rem // Ajusta o tamanho da fonte para títulos de projeto em telas muito pequenas
+
+  .projeto__descricao
+    font-size: 0.8rem // Ajusta o tamanho da fonte para descrições de projeto em telas muito pequenas
+
+  .projeto__funcionalidades
+    font-size: 0.8rem // Ajusta o tamanho da fonte para funcionalidades em telas muito pequenas

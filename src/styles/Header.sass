@@ -4,6 +4,9 @@
 // Cabeçalho
 .cabecalho
   padding: 2% 0% 0% 15%
+  display: flex
+  align-items: center
+  justify-content: space-between
   @include fadeIn
 
 .cabecalho__menu
@@ -21,3 +24,23 @@
 .cabecalho__menu__link:hover
   color: $cor-secundaria
   transform: scale(1.1)
+
+@media (max-width: 768px)
+  .cabecalho
+    margin-top: 1rem
+    padding: 2% 0% 0% 5%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  .cabecalho__menu
+    flex-direction: row
+    gap: 60px
+    align-items: center
+
+  .cabecalho__menu__link
+    font-size: 1.5rem
+
+@media (max-width: 480px)
+  .cabecalho__menu__link
+    font-size: 1.1rem

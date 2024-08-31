@@ -43,8 +43,8 @@ function Home() {
                     </a>
                 </div>
             </section>
-            <ScrollToTopButton />
             <img className="apresentacao__imagem" src={profileImg} alt="Foto de Felipe" />
+            <ScrollToTopButton />
         </main>
     );
 }

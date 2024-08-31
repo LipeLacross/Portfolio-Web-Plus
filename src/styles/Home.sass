@@ -5,20 +5,22 @@
 .apresentacao
   padding: 5% 15%
   display: flex
-  align-items: center
+  flex-direction: row // Direção padrão para telas grandes
+  align-items: flex-start
   justify-content: space-between
+  flex-wrap: wrap
 
 .apresentacao__conteudo
   width: 50%
   display: flex
   flex-direction: column
   gap: 40px
+  order: 1 // Ordem padrão
 
 .apresentacao__conteudo__titulo
   font-size: 2.25rem
   font-family: $fonte-primaria
   @include fadeIn
-  @include pulse
 
 .titulo-destaque
   color: $cor-terciaria
@@ -40,8 +42,12 @@
   color: $cor-terciaria
 
 .apresentacao__imagem
-  width: 60%
-  @include swing
+  width: 50%
+  max-height: 500px
+  object-fit: cover
+  margin-top: -20px
+  order: 2 // Ordem padrão
+  @include fadeIn
 
 .apresentacao__links
   display: flex
@@ -49,6 +55,7 @@
   justify-content: space-between
   align-items: center
   gap: 32px
+  order: 3 // Ordem padrão
   @include slideIn
 
 .apresentacao__links__subtitulo
@@ -82,85 +89,61 @@
   background-color: $cor-hover
   transform: scale(1.05)
 
-// Seção de projetos
-.apresentacao__projetos
-  display: grid
-  grid-template-columns: repeat(2, minmax(300px, 1fr))
-  gap: 2rem
-  padding: 2rem
-  max-width: 1200px
-  width: 100%
-  margin: 0 auto
-  justify-items: center
+// Responsividade
+@media (max-width: 1200px)
+  .apresentacao
+    padding: 5% 10%
 
-.projeto
-  color: $cor-primaria
-  background-color: $cor-secundaria
-  padding: 1.5rem
-  border-radius: 12px
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
-  display: flex
-  flex-direction: column
-  align-items: center
-  transition: transform 0.3s ease, box-shadow 0.3s ease
-  text-align: center
-  font-family: $fonte-secundaria
-  height: 100%
-  box-sizing: border-box
-  width: 25rem
-  margin: 5rem 0 auto
+  .apresentacao__conteudo
+    width: 40%
 
-.projeto:hover
-  transform: translateY(-8px)
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2)
+  .apresentacao__imagem
+    width: 60%
 
-.projeto__imagem
-  width: 100%
-  max-height: 200px
-  border-radius: 8px
-  margin-bottom: 1rem
+  .apresentacao__links__navegacao
+    width: 60%
 
-.projeto__titulo
-  color: $cor-primaria
-  font-size: 1.6rem
-  margin-bottom: 1rem
-  font-weight: 600
-  line-height: 1.3
+@media (max-width: 992px)
+  .apresentacao__conteudo
+    width: 70%
 
-.projeto__descricao
-  color: $cor-primaria
-  font-size: 1.1rem
-  margin-bottom: 1.5rem
-  line-height: 1.6
+  .apresentacao__imagem
+    width: 65%
 
-.projeto__funcionalidades
-  color: $cor-primaria
-  font-size: 1.1rem
-  margin-bottom: 1.5rem
-  text-align: left
-  line-height: 1.6
+  .apresentacao__links__navegacao
+    width: 70%
 
-.projeto__funcionalidades ul
-  padding-left: 1.5rem
-  list-style-type: disc
+@media (max-width: 768px)
+  .apresentacao
+    flex-direction: column
+    align-items: center
+    padding: 5% 5%
 
-.projeto__funcionalidades ul li
-  margin-bottom: 0.5rem
+  .apresentacao__conteudo
+    width: 100%
 
-.projeto__link
-  color: $cor-terciaria
-  font-weight: 600
-  display: flex
-  align-items: center
-  transition: color 0.3s ease
+  .apresentacao__imagem
+    width: 100%
+    max-height: 400px
+    order: 1 // Imagem antes dos links
 
-.projeto__link a
-  text-decoration: none
-  color: $cor-primaria
+  .apresentacao__links
+    width: 80%
+    order: 2 // Links depois da imagem
 
-.projeto__link i
-  margin-top: 1rem
-  margin-right: 0.5rem
+@media (max-width: 480px)
+  .apresentacao__conteudo__titulo
+    font-size: 1.75rem
 
-.projeto__link:hover
-  color: $cor-hover
+  .apresentacao__conteudo__texto
+    font-size: 1.2rem
+
+  .apresentacao__links__subtitulo
+    font-size: 1.2rem
+
+  .apresentacao__links__navegacao
+    font-size: 1.2rem
+    width: 90%
+
+  .apresentacao__imagem
+    max-height: 300px
