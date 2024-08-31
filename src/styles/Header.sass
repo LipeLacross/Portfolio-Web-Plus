@@ -1,0 +1,23 @@
+@import 'variables'
+@import 'mixins'
+
+// Cabeçalho
+.cabecalho
+  padding: 2% 0% 0% 15%
+  @include fadeIn
+
+.cabecalho__menu
+  display: flex
+  gap: 80px
+
+.cabecalho__menu__link
+  font-family: $fonte-secundaria
+  font-size: 1.5rem
+  font-weight: 600
+  color: $cor-terciaria
+  text-decoration: none
+  transition: color 0.3s ease, transform 0.3s ease
+
+.cabecalho__menu__link:hover
+  color: $cor-secundaria
+  transform: scale(1.1)

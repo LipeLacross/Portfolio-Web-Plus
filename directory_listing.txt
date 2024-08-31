@@ -1,0 +1,886 @@
+|-- assets/
+  |-- biturytech.jpeg
+  |-- bolosdanilda.jpeg
+  |-- codigos1.png
+  |-- codigos2.png
+  |-- decodificatudo.jpeg
+  |-- github.png
+  |-- instagram.png
+  |-- linkedin.png
+  |-- logo-github.svg
+  |-- profile.png
+  |-- redes-sociais-lipelacross.jpeg
+  |-- Sistema de Geração de Certificados 1.png
+  |-- Sistema de Geração de Certificados 2.png
+  |-- Sistema de Geração de Certificados 3.png
+  |-- Sistema de Geração de Certificados 4.png
+  |-- suatmb.jpeg
+  |-- whatsapp.png
+  |-- youtube.png
+|-- LICENSE
+|-- package-lock.json
+|-- package.json
+|-- public/
+  |-- favicon.ico
+  |-- index.html
+  |-- logo192.png
+  |-- logo512.png
+  |-- manifest.json
+  |-- robots.txt
+|-- Readme.md
+|-- src/
+  |-- App.css
+  |-- App.js
+  |-- App.test.js
+  |-- components/
+    |-- About.jsx
+    |-- Footer.jsx
+    |-- Header.jsx
+    |-- Home.jsx
+    |-- Portfolio.jsx
+  |-- index.css
+  |-- index.js
+  |-- logo.svg
+  |-- reportWebVitals.js
+  |-- setupTests.js
+  |-- styles/
+    |-- About.sass
+    |-- Footer.sass
+    |-- Header.sass
+    |-- Home.sass
+    |-- main.sass
+    |-- Portfolio.sass
+    |-- _mixins.sass
+    |-- _variables.sass
+|-- take_folder_code_and_names.py
+
+
+File contents:
+
+|-- assets/
+  |-- biturytech.jpeg
+  |-- bolosdanilda.jpeg
+  |-- codigos1.png
+  |-- codigos2.png
+  |-- decodificatudo.jpeg
+  |-- github.png
+  |-- instagram.png
+  |-- linkedin.png
+  |-- logo-github.svg
+  |-- profile.png
+  |-- redes-sociais-lipelacross.jpeg
+  |-- Sistema de Geração de Certificados 1.png
+  |-- Sistema de Geração de Certificados 2.png
+  |-- Sistema de Geração de Certificados 3.png
+  |-- Sistema de Geração de Certificados 4.png
+  |-- suatmb.jpeg
+  |-- whatsapp.png
+  |-- youtube.png
+|-- LICENSE
+|-- package-lock.json
+|-- package.json
+|-- public/
+  |-- favicon.ico
+  |-- index.html
+    Content:
+      <!DOCTYPE html>
+      <html lang="pt-br">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Home</title>
+          <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico">
+          <link rel="stylesheet" href="%PUBLIC_URL%/index.css">
+      </head>
+      <body>
+      <div id="root"></div>
+      </body>
+      </html>
+  |-- logo192.png
+  |-- logo512.png
+  |-- manifest.json
+  |-- robots.txt
+|-- Readme.md
+|-- src/
+  |-- App.css
+    Content:
+  |-- App.js
+    Content:
+      import React from 'react';
+      import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+      import Header from './components/Header';
+      import Footer from './components/Footer';
+      import About from './components/About';
+      import Home from './components/Home';
+      import Portfolio from './components/Portfolio';
+      import './styles/main.sass';
+      
+      function App() {
+          return (
+              <Router>
+                  <Header />
+                  <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/portfolio" element={<Portfolio />} />
+                  </Routes>
+                  <Footer />
+              </Router>
+          );
+      }
+      
+      export default App;
+  |-- App.test.js
+    Content:
+  |-- components/
+    |-- About.jsx
+      Content:
+        import React from 'react';
+        import '../styles/About.sass';
+        
+        function About() {
+            return (
+                <main className="apresentacao">
+                    <section className="apresentacao__conteudo">
+                        <h1 className="apresentacao__conteudo__titulo">Sobre mim</h1>
+                        <p className="apresentacao__conteudo__texto">
+                            Olá! Meu nome é <span className="apresentacao_conteudo_texto_destaque">Felipe Moreira</span> e sou um <span className="apresentacao_conteudo_texto_destaque">Fullstack Developer</span> com experiência em <span className="apresentacao_conteudo_texto_destaque">Python</span> e <span className="apresentacao_conteudo_texto_destaque">JavaScript</span>. Atualmente, estou cursando Engenharia da Computação na Universidade Federal Rural de Pernambuco e tenho trabalhado com tecnologias como <span className="apresentacao_conteudo_texto_destaque">React</span>, <span className="apresentacao_conteudo_texto_destaque">Angular</span>, <span className="apresentacao_conteudo_texto_destaque">Next.js</span>, <span className="apresentacao_conteudo_texto_destaque">Vue.js</span>, <span className="apresentacao_conteudo_texto_destaque">Flask</span> e <span className="apresentacao_conteudo_texto_destaque">Django</span>.
+                        </p>
+                        <p className="apresentacao__conteudo__texto">
+                            Estou em busca de oportunidades para aplicar minhas habilidades em projetos desafiadores. Embora eu ainda não tenha experiência profissional formal, meu comprometimento com o aprendizado e minha paixão pela tecnologia me motivam a buscar constantemente novos conhecimentos e a enfrentar desafios que me ajudem a crescer como profissional.
+                        </p>
+                    </section>
+                    <img className="apresentacao__imagem" src="assets/profile.png" alt="Foto de Felipe" />
+                </main>
+            );
+        }
+        
+        export default About;
+    |-- Footer.jsx
+      Content:
+        import React from 'react';
+        import '../styles/Footer.sass';
+        
+        function Footer() {
+            return (
+                <footer className="rodape">
+                    <p>&copy; 2024 Felipe Moreira Rios. Todos os direitos reservados</p>
+                </footer>
+            );
+        }
+        
+        export default Footer;
+    |-- Header.jsx
+      Content:
+        import React from 'react';
+        import '../styles/Header.sass';
+        
+        function Header() {
+            return (
+                <header className="cabecalho">
+                    <nav className="cabecalho__menu">
+                        <a className="cabecalho__menu__link" href="/">Home</a>
+                        <a className="cabecalho__menu__link" href="/about">Sobre mim</a>
+                        <a className="cabecalho__menu__link" href="/portfolio">Portfólio</a>
+                    </nav>
+                </header>
+            );
+        }
+        
+        export default Header;
+    |-- Home.jsx
+      Content:
+        import React from 'react';
+        import '../styles/Home.sass';
+        
+        function Home() {
+            return (
+                <main className="apresentacao">
+                    <section className="apresentacao__conteudo">
+                        <h1 className="apresentacao__conteudo__titulo">
+                            Eleve seu negócio digital a outro nível<strong className="titulo-destaque"> com um Sistema Web de qualidade!</strong>
+                        </h1>
+                        <p className="apresentacao__conteudo__texto">
+                            Olá! Sou Felipe Moreira, desenvolvedor Fullstack especializado. Ajudo pequenos negócios a colocarem em prática boas ideias. Vamos conversar?
+                        </p>
+                        <div className="apresentacao__links">
+                            <h2 className="apresentacao__links__subtitulo">Acesse minhas redes</h2>
+                            <a className="apresentacao__links__navegacao" href="https://github.com/LipeLacross">
+                                <img src="assets/github.png" alt="GitHub" />
+                                GitHub
+                            </a>
+                            <a className="apresentacao__links__navegacao" href="https://www.instagram.com/lipelacross/">
+                                <img src="assets/instagram.png" alt="Instagram" />
+                                Instagram
+                            </a>
+                            <a className="apresentacao__links__navegacao" href="https://www.youtube.com/@DevLipeLacross">
+                                <img src="assets/youtube.png" alt="YouTube" />
+                                YouTube
+                            </a>
+                            <a className="apresentacao__links__navegacao" href="https://wa.me/74981256120">
+                                <img src="assets/whatsapp.png" alt="WhatsApp" />
+                                WhatsApp
+                            </a>
+                            <a className="apresentacao__links__navegacao" href="https://www.linkedin.com/in/lipelacross-developer">
+                                <img src="assets/linkedin.png" alt="LinkedIn" />
+                                LinkedIn
+                            </a>
+                        </div>
+                    </section>
+                    <img className="apresentacao__imagem" src="assets/profile.png" alt="Foto de Felipe" />
+                </main>
+            );
+        }
+        
+        export default Home;
+    |-- Portfolio.jsx
+      Content:
+        import React from 'react';
+        import '../styles/Portfolio.sass';
+        
+        function Portfolio() {
+            const projetos = [
+                {
+                    titulo: "LipeLacross - Redes Sociais",
+                    imagem: "assets/redes-sociais-lipelacross.jpeg",
+                    descricao: "Uma página feita com Vue para disponibilizar links de redes sociais. Este projeto visa fornecer um local centralizado onde usuários podem acessar facilmente os links para os perfis de redes sociais.",
+                    funcionalidades: [
+                        "Visualização de Perfil: Exibe a foto de perfil, nome e profissão.",
+                        "Links de Redes Sociais: Fornece links para diversas redes sociais, como Instagram, LinkedIn, YouTube e GitHub.",
+                        "Animações: Inclui animações suaves para elementos ao passar o mouse e durante a renderização inicial."
+                    ],
+                    link: "https://github.com/LipeLacross/Links-Social-Media"
+                },
+                {
+                    titulo: "Sistema de Geração de Certificados",
+                    imagem: "assets/Sistema de Geração de Certificados 1.png",
+                    descricao: "Um projeto desenvolvido com Django e SQLite para controle de eventos e geração de certificados. Este sistema é ideal para eventos onde a emissão de certificados para participantes é necessária.",
+                    funcionalidades: [
+                        "Controle de Eventos: Gerenciamento de eventos com informações detalhadas.",
+                        "Geração de Certificados: Criação e armazenamento de certificados personalizados em formato PNG.",
+                        "Busca de Certificados: Funcionalidade para procurar certificados por e-mail.",
+                        "Visualização de Certificados: Exibição de certificados gerados para os participantes e administradores."
+                    ],
+                    link: "https://github.com/LipeLacross/PyStackWeek-6.0"
+                },
+                {
+                    titulo: "SuatMB",
+                    imagem: "assets/suatmb.jpeg",
+                    descricao: "O SuaTmb é um projeto de site para calcular a Taxa de Metabolismo Basal (TMB) e ajudar no planejamento de dietas. O site permite aos usuários inserir dados pessoais e informações sobre seu nível de atividade física para calcular suas necessidades calóricas diárias e recomendações nutricionais.",
+                    funcionalidades: [
+                        "Cálculo de TMB: Calcula a Taxa de Metabolismo Basal com base em dados como idade, peso, altura e gênero.",
+                        "Planejamento de Dieta: Oferece recomendações de macronutrientes com base nas necessidades diárias e objetivos de dieta.",
+                        "Interface Amigável: Formulários e resultados apresentados de maneira clara e intuitiva.",
+                        "Responsividade: Design adaptável para diferentes tamanhos de tela, incluindo dispositivos móveis."
+                    ],
+                    link: "https://github.com/LipeLacross/SuaTmb-Website"
+                },
+                {
+                    titulo: "DecodificaTudo",
+                    imagem: "assets/decodificatudo.jpeg",
+                    descricao: "Desafio de decodificador web requisitado pelo programa ONE da Oracle.",
+                    funcionalidades: [
+                        "Decodificador de texto com opções de criptografia e descriptografia.",
+                        "Interface responsiva e moderna com animações.",
+                        "Utilização de Bootstrap e HTML5 Boilerplate para estruturação e estilo."
+                    ],
+                    link: "https://github.com/LipeLacross/Decoder-Challenge"
+                },
+                {
+                    titulo: "Biturytech",
+                    imagem: "assets/biturytech.jpeg",
+                    descricao: "Este projeto é um site para a BituryTech, uma startup de tecnologia que oferece soluções inovadoras e avançadas. Desenvolvido com Next.js e Tailwind CSS, o site proporciona uma experiência moderna e responsiva.",
+                    funcionalidades: [
+                        "Navegação: Barra de navegação fixa com links para as principais seções do site.",
+                        "Seção 'Sobre': Apresenta o aplicativo ChronosGram com um vídeo demonstrativo e descrição das suas funcionalidades.",
+                        "Seção Destaque: Enfatiza a mensagem principal 'Nunca mais reprove sem estudar!' com design atraente.",
+                        "Seção 'Home': Detalha a BituryTech, incluindo a missão da empresa e imagem do aplicativo.",
+                        "Seção 'Produtos': Oferece um formulário para captura de e-mails e links para redes sociais.",
+                        "Rodapé: Informações sobre o desenvolvedor do site."
+                    ],
+                    link: "https://github.com/LipeLacross/Website-Biturytech"
+                },
+                {
+                    titulo: "Bolos da Nilda",
+                    imagem: "assets/bolosdanilda.jpeg",
+                    descricao: "A 'Bolos da Dona Nilda' é um site dedicado à venda de bolos e sucos artesanais. O site apresenta uma interface amigável com uma estrutura simples para navegar pelos produtos, adicionar itens ao carrinho e visualizar o total.",
+                    funcionalidades: [
+                        "Exibição de Produtos: Mostra produtos e categorias com imagens e preços.",
+                        "Carrinho de Compras: Permite adicionar produtos ao carrinho e calcular o total.",
+                        "Responsividade: Interface adaptada para diferentes dispositivos e tamanhos de tela.",
+                        "Interface Intuitiva: Navegação simples e direta para melhorar a experiência do usuário."
+                    ],
+                    link: "https://github.com/LipeLacross/Website-BolosDaNilda"
+                },
+                {
+                    titulo: "Personal Trainer",
+                    imagem: "assets/personaltrainer.jpeg",
+                    descricao: "Este é um site de página única para um Personal Trainer, desenvolvido para promover serviços de treinamento físico personalizado. O site é construído com Vue.js e apresenta uma interface limpa e moderna.",
+                    funcionalidades: [
+                        "Seção de Introdução: Apresenta informações sobre o Personal Trainer e seus serviços.",
+                        "Depoimentos: Exibe feedback de clientes satisfeitos.",
+                        "Contato: Formulário para agendamento de consultas e perguntas.",
+                        "Responsividade: Design adaptável para todos os dispositivos.",
+                        "Interatividade: Animações suaves para melhorar a experiência do usuário."
+                    ],
+                    link: "https://github.com/LipeLacross/Website-PersonalTrainer"
+                },
+                {
+                    titulo: "Portfólio",
+                    imagem: "assets/portfolio.jpeg",
+                    descricao: "Este site portfólio foi desenvolvido com a intenção de exibir os projetos e habilidades do desenvolvedor, bem como fornecer uma forma de contato para possíveis clientes ou empregadores.",
+                    funcionalidades: [
+                        "Seção de Apresentação: Informações pessoais e objetivos profissionais.",
+                        "Exibição de Projetos: Lista de projetos desenvolvidos com links para repositórios no GitHub.",
+                        "Formulário de Contato: Permite enviar mensagens diretamente ao desenvolvedor.",
+                        "Responsividade: Layout ajustado para dispositivos móveis e desktops.",
+                        "Design Moderno: Uso de cores, tipografia e espaçamento para criar uma apresentação visualmente agradável."
+                    ],
+                    link: "https://github.com/LipeLacross/Portfolio-Website"
+                }
+            ];
+        
+            return (
+                <main className="apresentacao">
+                    <section className="apresentacao__conteudo">
+                        <h1 className="apresentacao__conteudo__titulo">Meus Projetos</h1>
+                        <p className="apresentacao__conteudo__texto">
+                            Aqui estão alguns dos projetos em que trabalhei. Eles abrangem uma variedade de tecnologias e abordagens, refletindo minha experiência e aprendizado.
+                        </p>
+                        <h2 className="apresentacao__conteudo__titulo">Projetos em Destaque</h2>
+                        <div className="apresentacao__projetos">
+                            {projetos.map((projeto, index) => (
+                                <div className="projeto" key={index}>
+                                    <h3 className="projeto__titulo">{projeto.titulo}</h3>
+                                    <img className="projeto__imagem" src={projeto.imagem} alt={projeto.titulo} />
+                                    <p className="projeto__descricao">{projeto.descricao}</p>
+                                    <p className="projeto__funcionalidades">
+                                        🔨 Funcionalidades do Projeto:
+                                        <ul>
+                                            {projeto.funcionalidades.map((func, idx) => (
+                                                <li key={idx}>{func}</li>
+                                            ))}
+                                        </ul>
+                                    </p>
+                                    <p className="projeto__link">
+                                        <a href={projeto.link} target="_blank" rel="noopener noreferrer">
+                                            <i className="fab fa-github"></i> Repositório GitHub
+                                        </a>
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </main>
+            );
+        }
+        
+        export default Portfolio;
+  |-- index.css
+    Content:
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
+      }
+  |-- index.js
+    Content:
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import App from './App';
+      import './index.css';
+      
+      ReactDOM.render(
+          <React.StrictMode>
+              <App />
+          </React.StrictMode>,
+          document.getElementById('root')
+      );
+  |-- logo.svg
+  |-- reportWebVitals.js
+    Content:
+      const reportWebVitals = onPerfEntry => {
+        if (onPerfEntry && onPerfEntry instanceof Function) {
+          import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+            getCLS(onPerfEntry);
+            getFID(onPerfEntry);
+            getFCP(onPerfEntry);
+            getLCP(onPerfEntry);
+            getTTFB(onPerfEntry);
+          });
+        }
+      };
+      
+      export default reportWebVitals;
+  |-- setupTests.js
+    Content:
+      // jest-dom adds custom jest matchers for asserting on DOM nodes.
+      // allows you to do things like:
+      // expect(element).toHaveTextContent(/react/i)
+      // learn more: https://github.com/testing-library/jest-dom
+      import '@testing-library/jest-dom';
+  |-- styles/
+    |-- About.sass
+      Content:
+        @import 'variables'
+        @import 'mixins'
+        
+        // Seção 'Sobre'
+        .sobre
+          padding: 5% 15%
+          display: flex
+          flex-direction: column
+          align-items: center
+        
+        .sobre__titulo
+          font-size: 2.5rem
+          font-family: $fonte-primaria
+          margin-bottom: 1rem
+        
+        .sobre__texto
+          font-size: 1.5rem
+          font-family: $fonte-secundaria
+          line-height: 1.6
+          text-align: center
+          max-width: 800px
+    |-- Footer.sass
+      Content:
+        @import 'variables'
+        @import 'mixins'
+        
+        // Rodapé
+        .rodape
+          color: $cor-primaria
+          background-color: $cor-terciaria
+          padding: 24px
+          text-align: center
+          font-family: $fonte-secundaria
+          font-size: 1.5rem
+          font-weight: 400
+    |-- Header.sass
+      Content:
+        @import 'variables'
+        @import 'mixins'
+        
+        // Cabeçalho
+        .cabecalho
+          padding: 2% 0% 0% 15%
+          @include fadeIn
+        
+        .cabecalho__menu
+          display: flex
+          gap: 80px
+        
+        .cabecalho__menu__link
+          font-family: $fonte-secundaria
+          font-size: 1.5rem
+          font-weight: 600
+          color: $cor-terciaria
+          text-decoration: none
+          transition: color 0.3s ease, transform 0.3s ease
+        
+        .cabecalho__menu__link:hover
+          color: $cor-secundaria
+          transform: scale(1.1)
+    |-- Home.sass
+      Content:
+        @import 'variables'
+        @import 'mixins'
+        
+        // Apresentação e conteúdo
+        .apresentacao
+          padding: 5% 15%
+          display: flex
+          align-items: center
+          justify-content: space-between
+        
+        .apresentacao__conteudo
+          width: 50%
+          display: flex
+          flex-direction: column
+          gap: 40px
+        
+        .apresentacao__conteudo__titulo
+          font-size: 2.25rem
+          font-family: $fonte-primaria
+          @include fadeIn
+          @include pulse
+        
+        .titulo-destaque
+          color: $cor-terciaria
+        
+        .apresentacao__conteudo__texto
+          font-size: 1.5rem
+          font-family: $fonte-secundaria
+          @include slideIn
+        
+        .apresentacao__conteudo__texto li
+          font-size: 1.5rem
+          font-family: $fonte-secundaria
+        
+        .apresentacao__conteudo__texto a
+          text-decoration: none
+          color: $cor-terciaria
+        
+        .apresentacao_conteudo_texto_destaque
+          color: $cor-terciaria
+        
+        .apresentacao__imagem
+          width: 60%
+          @include swing
+        
+        .apresentacao__links
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          align-items: center
+          gap: 32px
+          @include slideIn
+        
+        .apresentacao__links__subtitulo
+          font-family: $fonte-primaria
+          font-weight: 400
+          font-size: 1.5rem
+        
+        .apresentacao__links__navegacao
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: 16px
+          border: 4px solid $cor-terciaria
+          width: 50%
+          text-align: center
+          border-radius: 20px
+          font-size: 1.5rem
+          font-weight: 600
+          padding: 11.5px 0
+          text-decoration: none
+          color: $cor-secundaria
+          font-family: $fonte-secundaria
+          transition: background-color 0.3s, transform 0.3s
+        
+        .apresentacao__links__navegacao img
+          width: 15%
+          margin-right: 3px
+          vertical-align: middle
+        
+        .apresentacao__links__navegacao:hover
+          background-color: $cor-hover
+          transform: scale(1.05)
+        
+        // Seção de projetos
+        .apresentacao__projetos
+          display: grid
+          grid-template-columns: repeat(2, minmax(300px, 1fr))
+          gap: 2rem
+          padding: 2rem
+          max-width: 1200px
+          width: 100%
+          margin: 0 auto
+          justify-items: center
+        
+        .projeto
+          color: $cor-primaria
+          background-color: $cor-secundaria
+          padding: 1.5rem
+          border-radius: 12px
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+          display: flex
+          flex-direction: column
+          align-items: center
+          transition: transform 0.3s ease, box-shadow 0.3s ease
+          text-align: center
+          font-family: $fonte-secundaria
+          height: 100%
+          box-sizing: border-box
+          width: 25rem
+          margin: 5rem 0 auto
+        
+        .projeto:hover
+          transform: translateY(-8px)
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2)
+        
+        .projeto__imagem
+          width: 100%
+          max-height: 200px
+          border-radius: 8px
+          margin-bottom: 1rem
+        
+        .projeto__titulo
+          color: $cor-primaria
+          font-size: 1.6rem
+          margin-bottom: 1rem
+          font-weight: 600
+          line-height: 1.3
+        
+        .projeto__descricao
+          color: $cor-primaria
+          font-size: 1.1rem
+          margin-bottom: 1.5rem
+          line-height: 1.6
+        
+        .projeto__funcionalidades
+          color: $cor-primaria
+          font-size: 1.1rem
+          margin-bottom: 1.5rem
+          text-align: left
+          line-height: 1.6
+        
+        .projeto__funcionalidades ul
+          padding-left: 1.5rem
+          list-style-type: disc
+        
+        .projeto__funcionalidades ul li
+          margin-bottom: 0.5rem
+        
+        .projeto__link
+          color: $cor-terciaria
+          font-weight: 600
+          display: flex
+          align-items: center
+          transition: color 0.3s ease
+        
+        .projeto__link a
+          text-decoration: none
+          color: $cor-primaria
+        
+        .projeto__link i
+          margin-top: 1rem
+          margin-right: 0.5rem
+        
+        .projeto__link:hover
+          color: $cor-hover
+    |-- main.sass
+      Content:
+        @import 'variables'
+        @import 'mixins'
+        
+        // Reset e estilos básicos
+        *
+          margin: 0
+          padding: 0
+        
+        body
+          box-sizing: border-box
+          background-color: $cor-primaria
+          color: $cor-secundaria
+    |-- Portfolio.sass
+      Content:
+        @import 'variables'
+        @import 'mixins'
+        
+        // Seção de projetos (mesmo conteúdo do Home.sass)
+        .apresentacao__projetos
+          display: grid
+          grid-template-columns: repeat(2, minmax(300px, 1fr))
+          gap: 2rem
+          padding: 2rem
+          max-width: 1200px
+          width: 100%
+          margin: 0 auto
+          justify-items: center
+        
+        .projeto
+          color: $cor-primaria
+          background-color: $cor-secundaria
+          padding: 1.5rem
+          border-radius: 12px
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+          display: flex
+          flex-direction: column
+          align-items: center
+          transition: transform 0.3s ease, box-shadow 0.3s ease
+          text-align: center
+          font-family: $fonte-secundaria
+          height: 100%
+          box-sizing: border-box
+          width: 25rem
+          margin: 5rem 0 auto
+        
+        .projeto:hover
+          transform: translateY(-8px)
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2)
+        
+        .projeto__imagem
+          width: 100%
+          max-height: 200px
+          border-radius: 8px
+          margin-bottom: 1rem
+        
+        .projeto__titulo
+          color: $cor-primaria
+          font-size: 1.6rem
+          margin-bottom: 1rem
+          font-weight: 600
+          line-height: 1.3
+        
+        .projeto__descricao
+          color: $cor-primaria
+          font-size: 1.1rem
+          margin-bottom: 1.5rem
+          line-height: 1.6
+        
+        .projeto__funcionalidades
+          color: $cor-primaria
+          font-size: 1.1rem
+          margin-bottom: 1.5rem
+          text-align: left
+          line-height: 1.6
+        
+        .projeto__funcionalidades ul
+          padding-left: 1.5rem
+          list-style-type: disc
+        
+        .projeto__funcionalidades ul li
+          margin-bottom: 0.5rem
+        
+        .projeto__link
+          color: $cor-terciaria
+          font-weight: 600
+          display: flex
+          align-items: center
+          transition: color 0.3s ease
+        
+        .projeto__link a
+          text-decoration: none
+          color: $cor-primaria
+        
+        .projeto__link i
+          margin-top: 1rem
+          margin-right: 0.5rem
+        
+        .projeto__link:hover
+          color: $cor-hover
+    |-- _mixins.sass
+      Content:
+        // Mixins de animações
+        @mixin fadeIn($duration: 1s, $timing-function: ease-in)
+          @keyframes fadeIn
+            from
+              opacity: 0
+            to
+              opacity: 1
+          animation: fadeIn $duration $timing-function
+        
+        @mixin slideIn($duration: 1s, $timing-function: ease-out)
+          @keyframes slideIn
+            from
+              transform: translateX(-100%)
+              opacity: 0
+            to
+              transform: translateX(0)
+              opacity: 1
+          animation: slideIn $duration $timing-function
+        
+        @mixin slideDown($duration: 1s, $timing-function: ease-out)
+          @keyframes slideDown
+            from
+              transform: translateY(-100%)
+              opacity: 0
+            to
+              transform: translateY(0)
+              opacity: 1
+          animation: slideDown $duration $timing-function
+        
+        @mixin rotate($duration: 1s, $timing-function: linear)
+          @keyframes rotate
+            from
+              transform: rotate(0deg)
+            to
+              transform: rotate(360deg)
+          animation: rotate $duration $timing-function
+        
+        @mixin pulse($duration: 2s, $timing-function: infinite)
+          @keyframes pulse
+            0%, 100%
+              transform: scale(1)
+            50%
+              transform: scale(1.05)
+          animation: pulse $duration $timing-function
+        
+        @mixin swing($duration: 1s, $timing-function: ease-in-out)
+          @keyframes swing
+            20%
+              transform: rotate(15deg)
+            40%
+              transform: rotate(-10deg)
+            60%
+              transform: rotate(5deg)
+            80%
+              transform: rotate(-5deg)
+            100%
+              transform: rotate(0deg)
+          animation: swing $duration $timing-function
+    |-- _variables.sass
+      Content:
+        // Importando fontes
+        @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap')
+        
+        // Cores
+        $cor-primaria: #000000
+        $cor-secundaria: #F6F6F6
+        $cor-terciaria: #FFDD48
+        $cor-hover: #FFDD48
+        
+        // Fontes
+        $fonte-primaria: 'Krona One', sans-serif
+        $fonte-secundaria: 'Montserrat', sans-serif
+|-- take_folder_code_and_names.py
+  Content:
+    import os
+    
+    def list_directory(path, level=0, output_file=None, exclude_file=None, list_content=False):
+        ignored_folders = {
+            '.venv', '.idea', '.git', 'node_modules', '__pycache__', 'dist', 
+            'build', '.DS_Store', '.vscode', 'target', 'out', '.pytest_cache', 
+            '.mypy_cache', 'logs', 'coverage'
+        }
+    
+        for item in os.listdir(path):
+            full_path = os.path.join(path, item)
+    
+            if item.startswith('.'):
+                continue
+    
+            if os.path.isdir(full_path) and item in ignored_folders:
+                continue
+    
+            if os.path.isfile(full_path):
+                if item == exclude_file:
+                    continue
+    
+                if output_file:
+                    output_file.write("  " * level + "|-- " + item + "\n")
+    
+                if list_content and item.endswith(('.py', '.js', '.java', '.c', '.cpp', '.h', '.ipynb', '.html', '.css', '.ts', '.tsx', '.jsx', '.scss', '.sass')):
+                    output_file.write("  " * (level + 1) + "Content:\n")
+                    with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
+                        for line in f:
+                            output_file.write("  " * (level + 2) + line)
+            elif os.path.isdir(full_path):
+                if output_file:
+                    output_file.write("  " * level + "|-- " + item + "/\n")
+                list_directory(full_path, level + 1, output_file, exclude_file, list_content)
+    
+    def generate_listing(directory_path, output_file_path, exclude_file_name):
+        with open(output_file_path, 'w', encoding='utf-8') as output_file:
+            list_directory(directory_path, output_file=output_file, exclude_file=exclude_file_name)
+            output_file.write("\n\nFile contents:\n\n")
+            list_directory(directory_path, output_file=output_file, exclude_file=exclude_file_name, list_content=True)
+    
+    directory_path = './'
+    output_file_path = 'directory_listing.txt'
+    exclude_file_name = os.path.basename(output_file_path)
+    
+    generate_listing(directory_path, output_file_path, exclude_file_name)
+    
+    print(f"The listing has been saved in {output_file_path}")

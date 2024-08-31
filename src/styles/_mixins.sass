@@ -1,0 +1,58 @@
+// Mixins de animações
+@mixin fadeIn($duration: 1s, $timing-function: ease-in)
+  @keyframes fadeIn
+    from
+      opacity: 0
+    to
+      opacity: 1
+  animation: fadeIn $duration $timing-function
+
+@mixin slideIn($duration: 1s, $timing-function: ease-out)
+  @keyframes slideIn
+    from
+      transform: translateX(-100%)
+      opacity: 0
+    to
+      transform: translateX(0)
+      opacity: 1
+  animation: slideIn $duration $timing-function
+
+@mixin slideDown($duration: 1s, $timing-function: ease-out)
+  @keyframes slideDown
+    from
+      transform: translateY(-100%)
+      opacity: 0
+    to
+      transform: translateY(0)
+      opacity: 1
+  animation: slideDown $duration $timing-function
+
+@mixin rotate($duration: 1s, $timing-function: linear)
+  @keyframes rotate
+    from
+      transform: rotate(0deg)
+    to
+      transform: rotate(360deg)
+  animation: rotate $duration $timing-function
+
+@mixin pulse($duration: 2s, $timing-function: infinite)
+  @keyframes pulse
+    0%, 100%
+      transform: scale(1)
+    50%
+      transform: scale(1.05)
+  animation: pulse $duration $timing-function
+
+@mixin swing($duration: 1s, $timing-function: ease-in-out)
+  @keyframes swing
+    20%
+      transform: rotate(15deg)
+    40%
+      transform: rotate(-10deg)
+    60%
+      transform: rotate(5deg)
+    80%
+      transform: rotate(-5deg)
+    100%
+      transform: rotate(0deg)
+  animation: swing $duration $timing-function
