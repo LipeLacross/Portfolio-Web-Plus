@@ -4,9 +4,6 @@ import ScrollToTopButton from './ScrollToTopButton';
 
 import imgLipeLacross from '../assets/redes-sociais-lipelacross.jpeg';
 import imgCertificados1 from '../assets/Sistema de Geração de Certificados 1.png';
-import imgCertificados2 from '../assets/Sistema de Geração de Certificados 2.png';
-import imgCertificados3 from '../assets/Sistema de Geração de Certificados 3.png';
-import imgCertificados4 from '../assets/Sistema de Geração de Certificados 4.png';
 import imgSuatmb from '../assets/suatmb.jpeg';
 import imgDecodificaTudo from '../assets/decodificatudo.jpeg';
 import imgBiturytech from '../assets/biturytech.jpeg';
