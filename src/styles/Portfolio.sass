@@ -1,122 +1,121 @@
 @import 'variables'
 @import 'mixins'
 
-// Seção de Introdução
 .portfolio__sobre
   padding: 5% 15%
   display: flex
   flex-direction: column
   align-items: center
-  @include slideDown(1s, ease-out) // Animação para a seção de introdução
+  @include slideDown(1s, ease-out)
 
 .portfolio__titulo
-  font-size: 2.8rem // Aumenta o tamanho da fonte para maior impacto
+  font-size: 2.8rem
   font-family: $fonte-primaria
-  color: #FFFFFF // Cor do título em branco
-  margin-bottom: 1rem // Ajusta o espaçamento inferior
-  @include fadeIn(1s, ease-in) // Animação de fade-in para o título
+  color: #FFFFFF
+  margin-bottom: 1rem
+  @include fadeIn(1s, ease-in)
 
 .portfolio__texto
-  font-size: 1.6rem // Aumenta o tamanho da fonte para melhor legibilidade
+  font-size: 1.6rem
   font-family: $fonte-secundaria
   color: $cor-secundaria
-  line-height: 1.8 // Aumenta o espaçamento entre linhas para melhor leitura
+  line-height: 1.8
   text-align: center
   max-width: 800px
   margin-bottom: 4rem
-  @include slideUp(1s, ease-out) // Animação de slide-up para o texto
+  @include slideUp(1s, ease-out)
 
-// Seção de Projetos
 .portfolio__projetos
   padding: 5% 15%
-  margin-bottom: 0 // Remove o espaçamento entre "Meus Projetos" e "Projetos em Destaque"
-  @include fadeIn(1s, ease-in) // Animação de fade-in para a seção de projetos
+  margin-bottom: 0
+  @include fadeIn(1s, ease-in)
 
 .portfolio__destaque-titulo
-  font-size: 3.2rem // Ajusta o tamanho da fonte para melhor destaque
+  font-size: 3.2rem
   font-family: $fonte-primaria
-  color: #FFFFFF // Cor do título em branco
+  color: $cor-terciaria
   text-align: center
-  @include swing(1s, ease-in-out) // Animação de swing para o título de destaque
+  @include swing(1s, ease-in-out)
 
 .portfolio__lista-projetos
   display: grid
-  grid-template-columns: repeat(3, 1fr) // Exibe 3 colunas
-  gap: 1rem // Reduz o espaçamento entre os projetos
+  grid-template-columns: repeat(3, 1fr)
+  gap: 1rem
   max-width: 1200px
   margin: 0 auto
 
 .projeto
   color: $cor-primaria
-  background-color: $cor-secundaria
-  padding: 1.5rem // Ajusta o padding para blocos menores
-  border-radius: 8px // Reduz o border-radius para compatibilidade com blocos menores
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) // Ajusta a sombra para blocos menores
+  background-image: linear-gradient(8800deg, $cor-terciaria, orange)
+  padding: 1.5rem
+  border-radius: 8px
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1)
   display: flex
   flex-direction: column
   align-items: center
-  justify-content: space-between // Garante que o conteúdo se distribua de forma flexível
+  justify-content: space-between
   transition: transform 0.3s ease, box-shadow 0.3s ease
   text-align: center
   font-family: $fonte-secundaria
   margin-top: -3rem
   width: 100%
   box-sizing: border-box
-  min-height: auto // Remove a altura mínima fixa para permitir ajustes automáticos
+  min-height: auto
   margin-bottom: 4rem
+  @include fadeIn(1s, ease-in)
 
 .projeto:hover
-  transform: scale(1.05) // Adiciona uma leve escala ao passar o mouse
+  transform: scale(1.05)
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
 
 .projeto__imagem
   width: 100%
-  max-height: 150px // Ajusta a altura máxima da imagem
-  border-radius: 6px // Reduz o border-radius para a imagem
-  margin-bottom: 1rem // Ajusta o espaçamento inferior
-  object-fit: cover // Garante que a imagem não distorça
-  @include zoomIn(1s, ease-out) // Animação de zoom-in para a imagem
+  max-height: 150px
+  border-radius: 6px
+  margin-bottom: 1rem
+  object-fit: cover
+  @include zoomIn(1s, ease-out)
 
 .projeto__titulo
   color: $cor-primaria
-  font-size: 1.4rem // Ajusta o tamanho da fonte para maior destaque
-  margin-bottom: 0.5rem // Reduz o espaçamento inferior
+  font-size: 1.4rem
+  margin-bottom: 0.5rem
   font-weight: 600
-  line-height: 1.4 // Aumenta o espaçamento entre linhas para melhor leitura
-  @include swing(1s, ease-in-out) // Animação de swing para o título
+  line-height: 1.4
+  @include swing(1s, ease-in-out)
 
 .projeto__descricao
   color: $cor-primaria
   font-weight: bolder
-  font-size: 1rem // Ajusta o tamanho da fonte para melhor legibilidade
-  margin-bottom: 1rem // Ajusta o espaçamento inferior
-  line-height: 1.8 // Aumenta o espaçamento entre linhas para melhor leitura
-  @include slideIn(1s, ease-in) // Animação de slide-in para a descrição
+  font-size: 1rem
+  margin-bottom: 1rem
+  line-height: 1.8
+  @include slideIn(1s, ease-in)
 
 .projeto__funcionalidades
   color: $cor-primaria
-  font-size: 1rem // Ajusta o tamanho da fonte para melhor legibilidade
-  margin-bottom: 1rem // Ajusta o espaçamento inferior
+  font-size: 1rem
+  margin-bottom: 1rem
   text-align: left
-  line-height: 1.8 // Aumenta o espaçamento entre linhas para melhor leitura
-  @include slideIn(1s, ease-out) // Animação de slide-in para funcionalidades
+  line-height: 1.8
+  @include slideIn(1s, ease-out)
 
 .projeto__funcionalidades ul
   padding-left: 1.5rem
   list-style-type: disc
-  @include fadeIn(1s, ease-in) // Animação de fade-in para a lista de funcionalidades
+  @include fadeIn(1s, ease-in)
 
 .projeto__funcionalidades ul li
-  margin-bottom: 0.5rem // Ajusta o espaçamento inferior
-  @include slideUp(1s, ease-out) // Animação de slide-up para cada item da lista
+  margin-bottom: 0.5rem
+  @include slideUp(1s, ease-out)
 
 .projeto__links
   display: flex
-  gap: 2rem // Ajusta o espaçamento entre os links
-  margin-top: 1rem // Ajusta o espaço acima dos links
-  padding: 0 // Remove o padding
-  margin: 0 // Remove a margem
-  @include fadeIn(1s, ease-in) // Animação de fade-in para os links
+  gap: 2rem
+  margin-top: 1rem
+  padding: 0
+  margin: 0
+  @include fadeIn(1s, ease-in)
 
 .projeto__link
   color: $cor-terciaria
@@ -124,8 +123,8 @@
   display: flex
   align-items: center
   transition: color 0.3s ease
-  margin: 0 // Remove a margem dos links
-  @include slideIn(1s, ease-out) // Animação de slide-in para os links
+  margin: 0
+  @include slideIn(1s, ease-out)
 
 .projeto__link a
   text-decoration: none
@@ -137,56 +136,55 @@
 .projeto__link:hover
   color: $cor-hover
 
-// Responsividade
 @media (max-width: 1200px)
   .portfolio__destaque-titulo
-    font-size: 2.5rem // Ajusta o tamanho da fonte para títulos em telas menores
+    font-size: 2.5rem
 
   .portfolio__lista-projetos
-    grid-template-columns: repeat(2, 1fr) // Ajusta para 2 colunas em telas menores
+    grid-template-columns: repeat(2, 1fr)
 
 @media (max-width: 800px)
   .portfolio__destaque-titulo
-    font-size: 2rem // Ajusta o tamanho da fonte para títulos em telas ainda menores
+    font-size: 2rem
 
   .portfolio__lista-projetos
-    grid-template-columns: 1fr // Ajusta para 1 coluna em telas ainda menores
+    grid-template-columns: 1fr
 
 @media (max-width: 600px)
   .portfolio__destaque-titulo
-    font-size: 1.8rem // Ajusta o tamanho da fonte para títulos em telas muito pequenas
+    font-size: 1.8rem
 
   .portfolio__titulo
-    font-size: 2rem // Ajusta o tamanho da fonte para títulos em telas menores
+    font-size: 2rem
 
   .portfolio__texto
-    font-size: 1.4rem // Ajusta o tamanho da fonte para textos em telas menores
+    font-size: 1.4rem
 
   .projeto__titulo
-    font-size: 1.2rem // Ajusta o tamanho da fonte para títulos de projeto em telas menores
+    font-size: 1.2rem
 
   .projeto__descricao
-    font-size: 0.9rem // Ajusta o tamanho da fonte para descrições de projeto em telas menores
+    font-size: 0.9rem
 
   .projeto__funcionalidades
-    font-size: 0.9rem // Ajusta o tamanho da fonte para funcionalidades em telas menores
+    font-size: 0.9rem
 
 @media (max-width: 450px)
   .portfolio__destaque-titulo
-    font-size: 1.5rem // Ajusta o tamanho da fonte para títulos em telas muito pequenas
+    font-size: 1.5rem
     margin-bottom: 1rem
 
   .portfolio__titulo
-    font-size: 1.6rem // Ajusta o tamanho da fonte para títulos em telas muito pequenas
+    font-size: 1.6rem
 
   .portfolio__texto
-    font-size: 1.2rem // Ajusta o tamanho da fonte para textos em telas muito pequenas
+    font-size: 1.2rem
 
   .projeto__titulo
-    font-size: 1rem // Ajusta o tamanho da fonte para títulos de projeto em telas muito pequenas
+    font-size: 1rem
 
   .projeto__descricao
-    font-size: 0.8rem // Ajusta o tamanho da fonte para descrições de projeto em telas muito pequenas
+    font-size: 0.8rem
 
   .projeto__funcionalidades
-    font-size: 0.8rem // Ajusta o tamanho da fonte para funcionalidades em telas muito pequenas
+    font-size: 0.8rem
