@@ -7,44 +7,50 @@ import instagramImg from '../assets/instagram.png';
 import youtubeImg from '../assets/youtube.png';
 import whatsappImg from '../assets/whatsapp.png';
 import linkedinImg from '../assets/linkedin.png';
-import profileImg from '../assets/profile.png';
+import profileImg1 from '../assets/portfolio_photo_1.png';
+import profileImg2 from '../assets/portfolio_photo_2.png';
 
 function Home() {
     return (
         <main className="apresentacao">
+            <section className="apresentacao__imagens">
+                <img className="apresentacao__imagem" src={profileImg1} alt="Foto de Felipe"/>
+                <img className="apresentacao__imagem" src={profileImg2} alt="Foto de Felipe"/>
+            </section>
             <section className="apresentacao__conteudo">
                 <h1 className="apresentacao__conteudo__titulo">
-                    Eleve seu negócio digital a outro nível<strong className="titulo-destaque"> com um Sistema Web de qualidade!</strong>
+                    Eleve seu negócio digital a outro nível<strong className="titulo-destaque"> com um Sistema Web de
+                    qualidade!</strong>
                 </h1>
                 <p className="apresentacao__conteudo__texto">
-                    Olá! Sou Felipe Moreira, desenvolvedor Fullstack especializado. Ajudo pequenos negócios a colocarem em prática boas ideias. Vamos conversar?
+                    Olá! Sou Felipe Moreira, desenvolvedor Fullstack especializado. Ajudo pequenos negócios a colocarem
+                    em prática boas ideias. Vamos conversar?
                 </p>
                 <div className="apresentacao__links">
                     <h2 className="apresentacao__links__subtitulo">Acesse minhas redes</h2>
                     <a className="apresentacao__links__navegacao" href="https://github.com/LipeLacross">
-                        <img src={githubImg} alt="GitHub" />
+                        <img src={githubImg} alt="GitHub"/>
                         GitHub
                     </a>
                     <a className="apresentacao__links__navegacao" href="https://www.instagram.com/lipelacross/">
-                        <img src={instagramImg} alt="Instagram" />
+                        <img src={instagramImg} alt="Instagram"/>
                         Instagram
                     </a>
                     <a className="apresentacao__links__navegacao" href="https://www.youtube.com/@DevLipeLacross">
-                        <img src={youtubeImg} alt="YouTube" />
+                        <img src={youtubeImg} alt="YouTube"/>
                         YouTube
                     </a>
                     <a className="apresentacao__links__navegacao" href="https://wa.me/74981256120">
-                        <img src={whatsappImg} alt="WhatsApp" />
+                        <img src={whatsappImg} alt="WhatsApp"/>
                         WhatsApp
                     </a>
                     <a className="apresentacao__links__navegacao" href="https://www.linkedin.com/in/lipelacross-developer">
-                        <img src={linkedinImg} alt="LinkedIn" />
+                        <img src={linkedinImg} alt="LinkedIn"/>
                         LinkedIn
                     </a>
                 </div>
             </section>
-            <img className="apresentacao__imagem" src={profileImg} alt="Foto de Felipe" />
-            <ScrollToTopButton />
+            <ScrollToTopButton/>
         </main>
     );
 }

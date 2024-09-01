@@ -1,7 +1,6 @@
 @import 'variables'
 @import 'mixins'
 
-// Apresentação e conteúdo
 .apresentacao
   padding: 5% 15%
   display: flex
@@ -11,7 +10,7 @@
   flex-wrap: wrap
 
 .apresentacao__conteudo
-  width: 50%
+  width: 45%
   display: flex
   flex-direction: column
   gap: 40px
@@ -20,7 +19,7 @@
 .apresentacao__conteudo__titulo
   font-size: 2.25rem
   font-family: $fonte-primaria
-  @include fadeIn
+  @include slideInLeft
 
 .titulo-destaque
   color: $cor-terciaria
@@ -28,25 +27,30 @@
 .apresentacao__conteudo__texto
   font-size: 1.5rem
   font-family: $fonte-secundaria
-  @include slideIn
-
-.apresentacao__conteudo__texto li
-  font-size: 1.5rem
-  font-family: $fonte-secundaria
+  @include slideInLeft
 
 .apresentacao__conteudo__texto a
   text-decoration: none
   color: $cor-terciaria
 
-.apresentacao_conteudo_texto_destaque
-  color: $cor-terciaria
-
-.apresentacao__imagem
-  width: 50%
-  max-height: 500px
-  object-fit: cover
-  margin-top: -20px
+.apresentacao__imagens
+  width: 45%
+  display: flex
+  flex-direction: column
+  gap: 40px
+  justify-content: space-around
+  align-items: flex-end
   order: 2
+  margin-left: 5%
+  @include slideInRight
+
+.apresentacao__imagens img
+  width: 100%
+  height: auto
+  max-width: 100%
+  object-fit: cover
+  border: 3px solid $cor-terciaria
+  border-radius: 40px
   @include fadeIn
 
 .apresentacao__links
@@ -56,7 +60,7 @@
   align-items: center
   gap: 32px
   order: 3
-  @include slideIn
+  @include slideInLeft
 
 .apresentacao__links__subtitulo
   font-family: $fonte-primaria
@@ -89,7 +93,6 @@
   background-color: $cor-hover
   transform: scale(1.05)
 
-// Responsividade
 @media (max-width: 1200px)
   .apresentacao
     padding: 5% 10%
@@ -97,18 +100,18 @@
   .apresentacao__conteudo
     width: 40%
 
-  .apresentacao__imagem
-    width: 60%
+  .apresentacao__imagens
+    width: 50%
 
   .apresentacao__links__navegacao
     width: 60%
 
 @media (max-width: 992px)
   .apresentacao__conteudo
-    width: 70%
+    width: 60%
 
-  .apresentacao__imagem
-    width: 65%
+  .apresentacao__imagens
+    width: 35%
 
   .apresentacao__links__navegacao
     width: 70%
@@ -116,22 +119,31 @@
 @media (max-width: 768px)
   .apresentacao
     flex-direction: column
+    text-align: center
     align-items: center
     padding: 5% 5%
+    margin-bottom: 45rem
 
   .apresentacao__conteudo
+    flex-direction: column
+    align-items: center
     width: 100%
 
-  .apresentacao__imagem
-    width: 100%
-    max-height: 400px
-    order: 1
+  .apresentacao__imagens
+
+    margin-top: 2rem
+    width: 60%
+    max-height: 200px
+    order: 2
 
   .apresentacao__links
     width: 80%
     order: 2
 
 @media (max-width: 480px)
+  .apresentacao
+    margin-bottom: 22rem
+
   .apresentacao__conteudo__titulo
     font-size: 1.75rem
 
@@ -139,11 +151,15 @@
     font-size: 1.2rem
 
   .apresentacao__links__subtitulo
-    font-size: 1.2rem
+    font-size: 1.1rem
 
   .apresentacao__links__navegacao
     font-size: 1.2rem
     width: 90%
 
-  .apresentacao__imagem
+  .apresentacao__imagens img
     max-height: 300px
+
+  @media (max-width: 410px)
+    .apresentacao
+      margin-bottom: 19rem

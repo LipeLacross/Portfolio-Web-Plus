@@ -7,7 +7,18 @@
       opacity: 1
   animation: fadeIn $duration $timing-function
 
-@mixin slideIn($duration: 1s, $timing-function: ease-out)
+@mixin slideInRight($duration: 1s, $ease: ease-in-out)
+  @keyframes slideInRight
+    0%
+      transform: translateX(100%)
+      opacity: 0
+    100%
+      transform: translateX(0)
+      opacity: 1
+
+  animation: slideInRight $duration $ease both
+
+@mixin slideInLeft($duration: 1s, $timing-function: ease-out)
   @keyframes slideIn
     from
       transform: translateX(-100%)

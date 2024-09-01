@@ -5,47 +5,132 @@
 .sobre
   padding: 5% 15%
   display: flex
-  flex-direction: column
+  flex-direction: row
   align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  @include fadeIn
+
+// Conteúdo
+.sobre__conteudo
+  width: 50%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  gap: 1.5rem
+  @include slideInLeft
 
 // Título da seção
 .sobre__titulo
   font-size: 2.5rem
   font-family: $fonte-primaria
   margin-bottom: 1rem
+  @include fadeIn
 
 // Texto da seção
 .sobre__texto
   font-size: 1.5rem
   font-family: $fonte-secundaria
   line-height: 1.6
-  text-align: center
   max-width: 800px
+  @include slideInLeft
+
+// Texto destacado
+.texto-destaque
+  color: $cor-terciaria
 
 // Imagem de perfil
-.apresentacao__imagem
-  width: 60%
-  max-height: 400px
+.sobre__imagem
+  width: 40%
+  margin-top: -30% // Ajusta a margem superior para alinhar melhor a imagem
+  max-height: 800px
   object-fit: cover
+  border-radius: 200px
+  @include fadeIn
 
-@media (max-width: 768px)
+// Media Queries
+@media (max-width: 1400px)
+  .sobre
+    padding: 5% 12%
+
+  .sobre__conteudo
+    width: 55%
+
+  .sobre__titulo
+    font-size: 2.3rem
+
+  .sobre__texto
+    font-size: 1.4rem
+
+  .sobre__imagem
+    width: 45%
+
+@media (max-width: 1200px)
+  .sobre
+    padding: 5% 10%
+    gap: 20px
+
+  .sobre__conteudo
+    width: 60%
+
+  .sobre__titulo
+    font-size: 2.2rem
+
+  .sobre__texto
+    font-size: 1.3rem
+
+  .sobre__imagem
+    width: 35%
+
+@media (max-width: 992px)
+  .sobre
+    padding: 5% 8%
+
+  .sobre__conteudo
+    width: 60%
+
   .sobre__titulo
     font-size: 2rem
 
   .sobre__texto
     font-size: 1.2rem
 
-  .apresentacao__imagem
-    width: 80%
+  .sobre__imagem
+    width: 35%
+
+@media (max-width: 768px)
+  .sobre
+    padding: 5% 5%
+    flex-direction: column
+    align-items: center
+
+  .sobre__conteudo
+    width: 100%
+    text-align: center
+    order: 2
+    align-items: center
+
+
+  .sobre__titulo
+    font-size: 1.9rem
+
+  .sobre__texto
+    font-size: 1.3rem
+    max-width: 90%
+
+  .sobre__imagem
+    width: 40%
     max-height: 300px
+    margin-top: 0
+    order: 1
 
 @media (max-width: 480px)
   .sobre__titulo
     font-size: 1.5rem
 
   .sobre__texto
-    font-size: 1rem
+    font-size: 1.0rem
 
-  .apresentacao__imagem
-    width: 100%
+  .sobre__imagem
+    width: 40%
     max-height: 200px
