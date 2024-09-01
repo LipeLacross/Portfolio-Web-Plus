@@ -1,3 +1,5 @@
+## 🌐 [English Version of README](README_EN.md)
+
 # Portfolio-Web-Plus
 
 **Portfolio-Web-Plus** é uma versão reestruturada do meu portfólio pessoal, desenvolvido com React e Sass. O objetivo é apresentar minhas habilidades e experiências de maneira interativa e responsiva.
