@@ -78,22 +78,22 @@
 
 .projeto__titulo
   color: $cor-primaria
-  font-size: 1.4rem
+  font-size: 1.8rem
   margin-bottom: 0.5rem
   font-weight: 600
   line-height: 1.4
   @include swing(1s, ease-in-out)
 
 .projeto__descricao
-  color: $cor-primaria
+  color: $cor-text
   font-weight: bolder
-  font-size: 1rem
+  font-size: 1.1rem
   margin-bottom: 1rem
   line-height: 1.8
   @include slideIn(1s, ease-in)
 
 .projeto__funcionalidades
-  color: $cor-primaria
+  color: $cor-text
   font-size: 1rem
   margin-bottom: 1rem
   text-align: left
@@ -118,20 +118,24 @@
   @include fadeIn(1s, ease-in)
 
 .projeto__link
-  color: $cor-terciaria
+  color: $cor-primaria
   font-weight: 600
   display: flex
   align-items: center
   transition: color 0.3s ease
   margin: 0
   @include slideIn(1s, ease-out)
+  text-decoration: none
+
 
 .projeto__link a
   text-decoration: none
   color: $cor-primaria
 
+
 .projeto__link i
   margin-right: 0.5rem
+  color: $cor-primaria
 
 .projeto__link:hover
   color: $cor-hover
@@ -181,10 +185,10 @@
     font-size: 1.2rem
 
   .projeto__titulo
-    font-size: 1rem
+    font-size: 1.3rem
 
   .projeto__descricao
-    font-size: 0.8rem
+    font-size: 0.9rem
 
   .projeto__funcionalidades
     font-size: 0.8rem
