@@ -12,7 +12,8 @@
 - **Integração de Redes Sociais**: Links para perfis e redes sociais.
 
 ### Exemplo Visual do Projeto
-![Exemplo Visual](https://github.com/user-attachments/assets/daf03d28-b725-4515-af2b-eaf11d46e91a)
+
+![image](https://github.com/user-attachments/assets/8b08ec4d-f113-44a3-aa07-c0b1fe5e8666)
 
 ## ✔️ Técnicas e Tecnologias Utilizadas
 
