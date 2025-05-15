@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/About.sass';
-import profileImage from '../assets/profile_photo_v2.png';
+import profileImage from '../assets/Photo_Profile.png';
 import ScrollToTopButton from './ScrollToTopButton';
 
 function About() {
